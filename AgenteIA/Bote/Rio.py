@@ -353,11 +353,17 @@ class Rio(Entorno):
             clock.tick(25)
             # ejecutamos las acciones del agente
             if con_agente:
-                for respuesta in agente.acciones:
-                    self.habla.say(respuesta)
-                    print(respuesta)
-                self.habla.runAndWait()
-                con_agente = False
+                # Obtener la primera acción del agente
+                primera_accion = agente.obtener_proxima_accion()
+                print("Acción a realizar:", primera_accion)
+
+                if primera_accion != "No hay acciones disponibles":
+                    self.habla.say(f"Acción a realizar: {primera_accion}")
+                    self.habla.runAndWait()
+                else:
+                    print("No hay acciones para reproducir.")
+                    
+                con_agente = False  # Después de procesar las acciones, desactiva el agente
 
         pygame.quit()
         quit()
