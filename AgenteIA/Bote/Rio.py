@@ -17,6 +17,27 @@ class Rio(Entorno):
     def get_percepciones(self, agente):
         agente.programa()
 
+    def describir_accion(self, estado_inicial, nuevo_estado):
+        n_misioneros_ini, n_canibales_ini, lado_ini = estado_inicial
+        n_misioneros_nuevo, n_canibales_nuevo, lado_nuevo = nuevo_estado
+
+        misioneros_movidos = n_misioneros_ini - n_misioneros_nuevo
+        canibales_movidos = n_canibales_ini - n_canibales_nuevo
+
+        direccion = "derecha" if lado_nuevo == 1 else "izquierda"
+
+        accion = []
+
+        if misioneros_movidos > 0:
+            accion.append(f"{misioneros_movidos} misionero{'s' if misioneros_movidos > 1 else ''}")
+        if canibales_movidos > 0:
+            accion.append(f"{canibales_movidos} caníbal{'es' if canibales_movidos > 1 else ''}")
+
+        if not accion:
+            return "No hay movimiento"
+
+        return f"Sube al bote {', y '.join(accion)} hacia la {direccion}"
+
     def ejecutar(self, agente):
         # definimos la ventana principal
         ancho = 1280
@@ -357,8 +378,9 @@ class Rio(Entorno):
                 primera_accion = agente.obtener_proxima_accion()
                 print("Acción a realizar:", primera_accion)
 
+                descripcion_accion = self.describir_accion(estado, primera_accion)
                 if primera_accion != "No hay acciones disponibles":
-                    self.habla.say(f"Acción a realizar: {primera_accion}")
+                    self.habla.say(f"Acción a realizar: {descripcion_accion}")
                     self.habla.runAndWait()
                 else:
                     print("No hay acciones para reproducir.")
