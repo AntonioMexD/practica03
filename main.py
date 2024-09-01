@@ -1,5 +1,5 @@
-from AgenteMapu import AgenteMapu
-from Rio import Rio
+from Busqueda.AgenteMapu import AgenteMapu
+from AgenteIA.Bote.Rio import Rio
 
 if __name__ == "__main__":
     juego = Rio()

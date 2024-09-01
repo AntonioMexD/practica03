@@ -1,8 +1,8 @@
 from AgenteIA.Entorno import Entorno
 import pygame
 import pyttsx4
-from Bote import Bote
-from Personaje import Personaje
+from .Bote import Bote
+from Personajes.Personaje import Personaje
 
 
 class Rio(Entorno):
@@ -27,27 +27,27 @@ class Rio(Entorno):
         negro = (0, 0, 0)
 
         # cargamos imagenes
-        agente_img = pygame.image.load('imagenes/agente.png')
-        bote_img = pygame.image.load('imagenes/bote.png')
-        fondo_img = pygame.image.load('imagenes/fondo.png')
-        pacifico_img = pygame.image.load('imagenes/pacifico.png')
-        pacifico1_img = pygame.image.load('imagenes/pacifico1.png')
-        verdugo_img = pygame.image.load('imagenes/verdugo.png')
-        verdugo1_img = pygame.image.load('imagenes/verdugo1.png')
-        nuevo_img = pygame.image.load('imagenes/nuevo.png')
-        nuevo1_img = pygame.image.load('imagenes/nuevo1.png')
-        agente_btn_img = pygame.image.load('imagenes/agente_btn.png')
-        agente_btn1_img = pygame.image.load('imagenes/agente_btn1.png')
-        fin_img = pygame.image.load('imagenes/fin.png')
-        victoria_img = pygame.image.load('imagenes/victoria.png')
-        go_img = pygame.image.load('imagenes/go.png')
-        go1_img = pygame.image.load('imagenes/go1.png')
-        sonido_on_img = pygame.image.load('imagenes/sonidoon.png')
-        sonido_off_img = pygame.image.load('imagenes/sonidooff.png')
+        agente_img = pygame.image.load('Recursos/imagenes/agente.png')
+        bote_img = pygame.image.load('Recursos/imagenes/bote.png')
+        fondo_img = pygame.image.load('Recursos/imagenes/fondo.png')
+        pacifico_img = pygame.image.load('Recursos/imagenes/pacifico.png')
+        pacifico1_img = pygame.image.load('Recursos/imagenes/pacifico1.png')
+        verdugo_img = pygame.image.load('Recursos/imagenes/verdugo.png')
+        verdugo1_img = pygame.image.load('Recursos/imagenes/verdugo1.png')
+        nuevo_img = pygame.image.load('Recursos/imagenes/nuevo.png')
+        nuevo1_img = pygame.image.load('Recursos/imagenes/nuevo1.png')
+        agente_btn_img = pygame.image.load('Recursos/imagenes/agente_btn.png')
+        agente_btn1_img = pygame.image.load('Recursos/imagenes/agente_btn1.png')
+        fin_img = pygame.image.load('Recursos/imagenes/fin.png')
+        victoria_img = pygame.image.load('Recursos/imagenes/victoria.png')
+        go_img = pygame.image.load('Recursos/imagenes/go.png')
+        go1_img = pygame.image.load('Recursos/imagenes/go1.png')
+        sonido_on_img = pygame.image.load('Recursos/imagenes/sonidoon.png')
+        sonido_off_img = pygame.image.load('Recursos/imagenes/sonidooff.png')
 
         # cargamos sonido
-        snd_fin = pygame.mixer.Sound('sonido/sonido_fin.wav')
-        snd_victoria = pygame.mixer.Sound('sonido/sonido_ganador.wav')
+        snd_fin = pygame.mixer.Sound('Recursos/sonido/sonido_fin.wav')
+        snd_victoria = pygame.mixer.Sound('Recursos/sonido/sonido_ganador.wav')
 
         font = pygame.font.SysFont(None, 25)
 
@@ -87,7 +87,7 @@ class Rio(Entorno):
         num_movida = 0
 
         # cargar sonido de fondo
-        pygame.mixer.music.load('sonido/sonido_fondo.mp3')
+        pygame.mixer.music.load('Recursos/sonido/sonido_fondo.mp3')
         pygame.mixer.music.play(-1)
         sonido = True
         con_agente = False
