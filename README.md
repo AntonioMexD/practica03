@@ -46,10 +46,11 @@ Refinamiento de la Heurística: Se ajustó la heurística utilizada en A* para m
 Manejo de la Memoria: Se optimizó el manejo de memoria, especialmente en DFS, donde se garantizó que los estados se almacenarán de manera eficiente, evitando desbordamientos de la pila en problemas de gran profundidad.
 Diagrama de flujo
 Para visualizar los procesos de búsqueda en DFS y A*, ayudando a entender las diferencias en sus estrategias de exploración.
+<img width="628" alt="Captura de pantalla 2024-09-01 a la(s) 9 28 46 p  m" src="https://github.com/user-attachments/assets/4753738e-7770-41af-8f40-2a100ec9bee6">
 
 ## Resultados
 
-
+<img width="620" alt="Captura de pantalla 2024-09-01 a la(s) 9 30 46 p  m" src="https://github.com/user-attachments/assets/78bea4a0-52a7-4987-be19-899af93bfa6f">
 
 ## Discusión
 Al comparar los resultados obtenidos con los algoritmos de búsqueda en profundidad (DFS) y búsqueda A* para resolver el problema de los pacíficos y verdugos, se observa que ambos algoritmos encontraron la misma solución. La secuencia de estados visitados en ambas búsquedas es idéntica, lo que sugiere que, en este caso particular, tanto DFS como A* fueron capaces de explorar el espacio de búsqueda de manera efectiva y llegar al mismo resultado.
