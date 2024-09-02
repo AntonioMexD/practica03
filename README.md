@@ -46,6 +46,7 @@ Refinamiento de la Heurística: Se ajustó la heurística utilizada en A* para m
 Manejo de la Memoria: Se optimizó el manejo de memoria, especialmente en DFS, donde se garantizó que los estados se almacenarán de manera eficiente, evitando desbordamientos de la pila en problemas de gran profundidad.
 Diagrama de flujo
 Para visualizar los procesos de búsqueda en DFS y A*, ayudando a entender las diferencias en sus estrategias de exploración.
+
 <img width="628" alt="Captura de pantalla 2024-09-01 a la(s) 9 28 46 p  m" src="https://github.com/user-attachments/assets/4753738e-7770-41af-8f40-2a100ec9bee6">
 
 ## Resultados
